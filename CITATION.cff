@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this catalog, please cite it as below."
+title: "BHIL-VAULT-CONLANG: Verified Asset Universe of Fictional Constructed Languages"
+authors:
+  - family-names: "Hurd"
+    given-names: "Barry"
+    affiliation: "Barry Hurd Intelligence Lab (BHIL)"
+version: 1.0.0
+date-released: "2026-09-11"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/PolymathWizard/BHIL-VAULT-CONLANG"
+keywords:
+  - conlang
+  - constructed languages
+  - Klingon
+  - Elvish
+  - metadata
+  - DCAT
+  - Croissant
+  - knowledge base
+  - competitive intelligence
+abstract: >
+  A metadata-rich, evidence-graded catalog of 31 significant data assets,
+  institutions, visualizations, and technologies in the fictional
+  constructed-language domain, serialized as JSON-LD with a DCAT v3,
+  schema.org, and MLCommons Croissant crosswalk. Built with the BHIL VAULT
+  framework.

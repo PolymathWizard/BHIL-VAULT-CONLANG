@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bhil.dev/vault/schema/vault-asset.schema.json",
+  "title": "VAULT Asset Record",
+  "description": "One catalogued asset in a BHIL VAULT knowledge library. Fields crosswalk to DCAT v3, schema.org/Dataset, and MLCommons Croissant per docs/01-taxonomy-ontology.md.",
+  "type": "object",
+  "required": ["asset_id", "asset_name", "asset_url", "asset_type", "category", "description", "provenance", "evidence_tier", "rights_flag", "last_updated"],
+  "additionalProperties": false,
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^vault:conlang-[abcd][0-9]{2}$",
+      "description": "Stable identifier. Category letter plus two-digit ordinal. Deletions leave gaps."
+    },
+    "asset_name": { "type": "string", "minLength": 3 },
+    "asset_url": { "type": "string", "pattern": "^https?://" },
+    "asset_type": {
+      "type": "string",
+      "enum": ["schema:Dataset", "schema:Service", "schema:CreativeWork", "schema:SoftwareApplication", "schema:Book", "schema:LearningResource"]
+    },
+    "category": {
+      "type": "string",
+      "enum": ["A-Datasets-Benchmarks", "B-Distribution-Hosting", "C-Visualizations-Schematics", "D-Technology-Tools"]
+    },
+    "description": { "type": "string", "minLength": 20 },
+    "tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "provenance": {
+      "type": "object",
+      "required": ["owner", "author", "published_date", "identifier"],
+      "additionalProperties": false,
+      "properties": {
+        "owner": { "type": "string" },
+        "author": { "type": "string" },
+        "published_date": { "type": "string" },
+        "identifier": { "type": "string" }
+      }
+    },
+    "license": { "type": "string" },
+    "distribution": { "type": "string" },
+    "temporal_coverage": { "type": "string" },
+    "related_assets": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^vault:conlang-[abcd][0-9]{2}$" }
+    },
+    "strategic_value": { "type": "string" },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "as_of", "evidence_tier", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "value": { "type": ["string", "number"] },
+          "as_of": { "type": "string" },
+          "evidence_tier": { "type": "string", "enum": ["V", "C", "S", "U", "I"] },
+          "source": { "type": "string", "minLength": 3 }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation", "target"],
+        "additionalProperties": false,
+        "properties": {
+          "relation": { "type": "string", "enum": ["owns", "documents", "hosts", "teaches", "derived_from", "guards_canon_of", "cites"] },
+          "target": { "type": "string" }
+        }
+      }
+    },
+    "evidence_tier": {
+      "type": "string",
+      "enum": ["V", "C", "S", "U", "I"],
+      "description": "Asset-level tier. V VERIFIED, C CORROBORATED, S STATED (quarantined), U UNCORROBORATED, I INFERENCE. Default to the lowest defensible tier."
+    },
+    "rights_flag": {
+      "type": "string",
+      "enum": ["franchise-ip", "creator-owned", "open-license", "fair-use-community"],
+      "description": "Navigation aid for rights review; not legal advice."
+    },
+    "notes": { "type": "string" },
+    "last_updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+  }
+}

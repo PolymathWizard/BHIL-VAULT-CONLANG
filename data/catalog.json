@@ -1,0 +1,1707 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "vault": "https://bhil.dev/vault/schema#"
+  },
+  "catalog_name": "BHIL-VAULT-CONLANG",
+  "catalog_version": "1.0.0",
+  "framework": "BHIL VAULT (Verified Asset Universe & Landscape Taxonomy)",
+  "run_date": "2026-09-11",
+  "publisher": "Barry Hurd Intelligence Lab (BHIL)",
+  "license_content": "CC-BY-4.0",
+  "evidence_tiers": {
+    "V": "VERIFIED",
+    "C": "CORROBORATED",
+    "S": "STATED (quarantined)",
+    "U": "UNCORROBORATED",
+    "I": "INFERENCE"
+  },
+  "rights_flags": [
+    "franchise-ip",
+    "creator-owned",
+    "open-license",
+    "fair-use-community"
+  ],
+  "assets": [
+    {
+      "asset_id": "vault:conlang-a01",
+      "asset_name": "The Klingon Dictionary (TKD)",
+      "asset_url": "https://www.simonandschuster.com/books/The-Klingon-Dictionary",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Creator-published lexicon and grammar of tlhIngan Hol; the canonical anchor of Klingon data.",
+      "tags": [
+        "Klingon",
+        "Star Trek",
+        "lexicon",
+        "Okrand",
+        "canon"
+      ],
+      "provenance": {
+        "owner": "Paramount/CBS (IP); Pocket Books (publisher)",
+        "author": "Marc Okrand",
+        "published_date": "1985/1992",
+        "identifier": "ISBN:0-671-74559-X"
+      },
+      "license": "All rights reserved (franchise IP)",
+      "distribution": "Print (Pocket Books / Simon & Schuster)",
+      "temporal_coverage": "1985-2026",
+      "related_assets": [
+        "vault:conlang-a02",
+        "vault:conlang-d06",
+        "vault:conlang-d07"
+      ],
+      "strategic_value": "Gold-standard creator-published, franchise-licensed conlang dataset.",
+      "metrics": [
+        {
+          "name": "words_1985_edition",
+          "value": 1586,
+          "as_of": "1985",
+          "evidence_tier": "S",
+          "source": "Goodreads review; order corroborated by Wikipedia (~1,800)"
+        },
+        {
+          "name": "words_1992_edition",
+          "value": 1889,
+          "as_of": "1992",
+          "evidence_tier": "S",
+          "source": "Goodreads review (+219 words as addendum)"
+        },
+        {
+          "name": "modern_canon_popular",
+          "value": "~3000",
+          "as_of": "2026",
+          "evidence_tier": "U",
+          "source": "popular consensus figure"
+        },
+        {
+          "name": "aggregated_lexicon_entries",
+          "value": 4221,
+          "as_of": "2018-09",
+          "evidence_tier": "S",
+          "source": "maintainer De'vID self-report"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:klingon"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a02",
+      "asset_name": "KLI New Klingon Words List",
+      "asset_url": "https://www.kli.org/about-klingon/new-klingon-words/",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Post-TKD canonical additions from confirmed Okrand sources, each entry source-cited.",
+      "tags": [
+        "Klingon",
+        "canon",
+        "KLI",
+        "ledger"
+      ],
+      "provenance": {
+        "owner": "Klingon Language Institute",
+        "author": "KLI volunteer curation team",
+        "published_date": "ongoing",
+        "identifier": "kli.org/new-klingon-words"
+      },
+      "license": "Fair-use community compilation",
+      "distribution": "Web",
+      "temporal_coverage": "1992-2026",
+      "related_assets": [
+        "vault:conlang-a01",
+        "vault:conlang-b02",
+        "vault:conlang-d06"
+      ],
+      "strategic_value": "The canonical-labeling exemplar: every entry carries provenance.",
+      "metrics": [
+        {
+          "name": "acceptance_rule",
+          "value": "confirmed Okrand sources only",
+          "as_of": "2026",
+          "evidence_tier": "V",
+          "source": "kli.org policy"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-a01"
+        },
+        {
+          "relation": "documents",
+          "target": "lang:klingon"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a03",
+      "asset_name": "Eldamo: An Elvish Lexicon",
+      "asset_url": "https://eldamo.org/",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "XML-backed lexicon of all Tolkien's invented languages with period stratification and stable per-reference identifiers.",
+      "tags": [
+        "Tolkien",
+        "Quenya",
+        "Sindarin",
+        "XML",
+        "open-data"
+      ],
+      "provenance": {
+        "owner": "Paul Strack",
+        "author": "Paul Strack",
+        "published_date": "2008; v0.8.13 2026-05-31",
+        "identifier": "eldamo.org; github.com/pfstrack/eldamo"
+      },
+      "license": "CC-BY",
+      "distribution": "XML data model; GitHub",
+      "temporal_coverage": "1910-1973 (Tolkien periods); site 2008-2026",
+      "related_assets": [
+        "vault:conlang-a04",
+        "vault:conlang-d08",
+        "vault:conlang-c05"
+      ],
+      "strategic_value": "Only conlang dataset on a formal data model with an open license and stable IDs; Croissant pilot candidate.",
+      "metrics": [
+        {
+          "name": "lexical_entries",
+          "value": "tens of thousands",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "Fenopaedia description; no exact integer published"
+        },
+        {
+          "name": "new_tolkien_words_since",
+          "value": "none since v0.8.6 (2023-05)",
+          "as_of": "2026",
+          "evidence_tier": "V",
+          "source": "eldamo.org version notes"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:tolkien-languages"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a04",
+      "asset_name": "Parf Edhellen / Elfdict",
+      "asset_url": "https://www.elfdict.com/",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Aggregated collaborative Elvish dictionary importing multiple quality sources, searchable by sense and conjugation.",
+      "tags": [
+        "Tolkien",
+        "Elvish",
+        "aggregator",
+        "dictionary"
+      ],
+      "provenance": {
+        "owner": "Open-source community",
+        "author": "Community",
+        "published_date": "~2011-2026",
+        "identifier": "elfdict.com"
+      },
+      "license": "Fair-use community compilation",
+      "distribution": "Web",
+      "temporal_coverage": "2011-2026",
+      "related_assets": [
+        "vault:conlang-a03",
+        "vault:conlang-d08"
+      ],
+      "strategic_value": "Largest aggregated Elvish lookup surface; illustrates aggregation-versus-canon tension.",
+      "metrics": [
+        {
+          "name": "words",
+          "value": 136992,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site self-report"
+        },
+        {
+          "name": "active_glosses",
+          "value": 49436,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site self-report"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-a03"
+        },
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-d08"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a05",
+      "asset_name": "Na'vi-English Dictionary (LearnNavi.org)",
+      "asset_url": "https://files.learnnavi.org/dicts/NaviDictionary.pdf",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Most comprehensive fan-maintained Na'vi lexicon, source-tagged per word; canon authority Paul Frommer.",
+      "tags": [
+        "Na'vi",
+        "Avatar",
+        "dictionary",
+        "Frommer"
+      ],
+      "provenance": {
+        "owner": "LearnNavi community (compilation); Disney/Fox (language IP)",
+        "author": "Titstewan (Roland R.S.); prev. Mark Miller",
+        "published_date": "2010-2026",
+        "identifier": "learnnavi.org"
+      },
+      "license": "Fair-use community compilation",
+      "distribution": "PDF; web",
+      "temporal_coverage": "2010-2026",
+      "related_assets": [
+        "vault:conlang-b04"
+      ],
+      "strategic_value": "Best example of creator-community co-development with explicit canon labeling.",
+      "metrics": [
+        {
+          "name": "words_wikibooks_print",
+          "value": 2656,
+          "as_of": "2024",
+          "evidence_tier": "S",
+          "source": "Wikibooks print version"
+        },
+        {
+          "name": "words_attested_2026",
+          "value": "2000+",
+          "as_of": "2026",
+          "evidence_tier": "U",
+          "source": "secondary sources"
+        },
+        {
+          "name": "seed_vocabulary",
+          "value": "~500 Frommer words",
+          "as_of": "2010-03",
+          "evidence_tier": "C",
+          "source": "project history"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:navi"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a06",
+      "asset_name": "Dothraki Dictionary (languageinvention.com)",
+      "asset_url": "https://wiki.languageinvention.com/index.php?title=Dothraki_Dictionary",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Creator-hosted Dothraki lexicon with IPA, part of speech, and glossed example sentences.",
+      "tags": [
+        "Dothraki",
+        "Game of Thrones",
+        "Peterson",
+        "lexicon"
+      ],
+      "provenance": {
+        "owner": "HBO (IP); David J. Peterson (documentation)",
+        "author": "David J. Peterson",
+        "published_date": "2010-2026",
+        "identifier": "wiki.languageinvention.com"
+      },
+      "license": "All rights reserved (franchise IP); creator-hosted docs",
+      "distribution": "Web wiki",
+      "temporal_coverage": "2010-2026",
+      "related_assets": [
+        "vault:conlang-d09"
+      ],
+      "strategic_value": "First conlang built for a major TV production; deep culture-clustered vocabulary.",
+      "metrics": [
+        {
+          "name": "words_2011",
+          "value": 3163,
+          "as_of": "2011-09",
+          "evidence_tier": "C",
+          "source": "Wired, cited on Wikipedia"
+        },
+        {
+          "name": "words_common_citation",
+          "value": "3000+",
+          "as_of": "2026",
+          "evidence_tier": "C",
+          "source": "multiple secondary sources"
+        },
+        {
+          "name": "delivered_before_shooting",
+          "value": "1700+",
+          "as_of": "2010",
+          "evidence_tier": "C",
+          "source": "production history, multiple sources"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:dothraki"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a07",
+      "asset_name": "Dovahzul Dictionary (Thuum.org)",
+      "asset_url": "https://www.thuum.org/",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Dictionary of the Skyrim dragon language distinguishing canonical from fan-made entries; dual role as dataset and hosting institution.",
+      "tags": [
+        "Dovahzul",
+        "Skyrim",
+        "Bethesda",
+        "canon-labeling"
+      ],
+      "provenance": {
+        "owner": "Bethesda Softworks (IP); Thuum.org community (compilation)",
+        "author": "paarthurnax et al.",
+        "published_date": "2011-2019 (+ESO additions)",
+        "identifier": "thuum.org"
+      },
+      "license": "Unofficial fair-use (Bethesda IP)",
+      "distribution": "Web; PDF print editions; CSV/Excel export",
+      "temporal_coverage": "2011-2019",
+      "related_assets": [
+        "vault:conlang-c03"
+      ],
+      "strategic_value": "Clearest canon-versus-reconstruction case study in the domain.",
+      "metrics": [
+        {
+          "name": "canonical_words",
+          "value": 647,
+          "as_of": "2024",
+          "evidence_tier": "V",
+          "source": "Thuum.org Fifth Edition print dictionary"
+        },
+        {
+          "name": "expanded_fan_words",
+          "value": "4000+",
+          "as_of": "2014",
+          "evidence_tier": "S",
+          "source": "Thuum.org Third Edition self-description; decayed"
+        },
+        {
+          "name": "official_shout_words",
+          "value": "~40",
+          "as_of": "2011",
+          "evidence_tier": "U",
+          "source": "in-game translations, single-source"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "guards_canon_of",
+          "target": "lang:dovahzul"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11",
+      "notes": "Site largely unmaintained since early 2019; expanded metrics decayed one tier."
+    },
+    {
+      "asset_id": "vault:conlang-a08",
+      "asset_name": "Belter Creole Dictionary (lang belta)",
+      "asset_url": "https://archive.org/details/BelterCreoleDictionaryVersion1.1",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "English-based creole for The Expanse with wide multilingual lexical influence; distinct novel and TV versions.",
+      "tags": [
+        "Belter Creole",
+        "The Expanse",
+        "creole",
+        "Farmer"
+      ],
+      "provenance": {
+        "owner": "Nick Farmer (language); TheKreig (compilation)",
+        "author": "Nick Farmer",
+        "published_date": "2015-2022",
+        "identifier": "archive.org Fictionary v1.1"
+      },
+      "license": "Creator-owned language; fair-use compilation",
+      "distribution": "E-reader dictionary; web",
+      "temporal_coverage": "2015-2026",
+      "related_assets": [],
+      "strategic_value": "Only major creole conlang; strong candidate for sociolinguistic tagging.",
+      "metrics": [
+        {
+          "name": "words_created",
+          "value": "1000+",
+          "as_of": "2019",
+          "evidence_tier": "C",
+          "source": "Ars Technica, cited on Wikipedia"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:belter-creole"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "creator-owned",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a09",
+      "asset_name": "Chakobsa / Neo-Chakobsa (Dune films)",
+      "asset_url": "https://www.omniglot.com/conscripts/chakobsa.htm",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Expanded Fremen language of the 2021/2024 films with full grammar, lexicon, and a custom abugida script.",
+      "tags": [
+        "Chakobsa",
+        "Dune",
+        "Peterson",
+        "abugida"
+      ],
+      "provenance": {
+        "owner": "Legendary (IP); David J. and Jessie Peterson (language)",
+        "author": "David J. Peterson; Jessie Peterson",
+        "published_date": "2021-2024",
+        "identifier": "dedalvs.com glossed dialogue"
+      },
+      "license": "All rights reserved (franchise IP)",
+      "distribution": "Film dialogue; creator documentation; Omniglot reference",
+      "temporal_coverage": "2021-2026",
+      "related_assets": [
+        "vault:conlang-c04"
+      ],
+      "strategic_value": "Recent high-visibility film conlang with a canonical constructed script.",
+      "metrics": [
+        {
+          "name": "herbert_base_words",
+          "value": "~123 marked Fremen words",
+          "as_of": "1965-1985",
+          "evidence_tier": "U",
+          "source": "single-source census"
+        },
+        {
+          "name": "full_grammar_lexicon_script",
+          "value": "yes",
+          "as_of": "2024",
+          "evidence_tier": "C",
+          "source": "multiple independent coverage"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:chakobsa"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-a10",
+      "asset_name": "ConlangBench (conlang NLP benchmark)",
+      "asset_url": "https://arxiv.org/abs/2608.03505",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "Claimed first large-scale conlang NLP benchmark across 21 constructed languages.",
+      "tags": [
+        "NLP",
+        "benchmark",
+        "LLM",
+        "parallel-corpus"
+      ],
+      "provenance": {
+        "owner": "Academic preprint",
+        "author": "ConlangBench authors",
+        "published_date": "2026 (preprint)",
+        "identifier": "arXiv:2608.03505"
+      },
+      "license": "Open (claimed)",
+      "distribution": "arXiv; dataset release claimed",
+      "temporal_coverage": "2026",
+      "related_assets": [
+        "vault:conlang-a11"
+      ],
+      "strategic_value": "If genuine and openly licensed, partially closes white-space item 1.",
+      "metrics": [
+        {
+          "name": "conlangs_covered",
+          "value": 21,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "abstract self-report"
+        },
+        {
+          "name": "parallel_sentence_pairs",
+          "value": "21M+ (430K non-Esperanto)",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "abstract self-report"
+        },
+        {
+          "name": "vocabulary_entries",
+          "value": "321K",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "abstract self-report"
+        }
+      ],
+      "edges": [],
+      "evidence_tier": "U",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11",
+      "notes": "Future-dated arXiv identifier at run time; verification pending."
+    },
+    {
+      "asset_id": "vault:conlang-a11",
+      "asset_name": "Emergent Translation Klingon MT Dataset",
+      "asset_url": "https://arxiv.org/pdf/1710.06922",
+      "asset_type": "schema:Dataset",
+      "category": "A-Datasets-Benchmarks",
+      "description": "15,000 English captions machine-translated into Klingon pIqaD via Bing Translator for low-resource MT experiments.",
+      "tags": [
+        "Klingon",
+        "machine-translation",
+        "NLP",
+        "pIqaD"
+      ],
+      "provenance": {
+        "owner": "Academic authors",
+        "author": "Lee et al.",
+        "published_date": "2017",
+        "identifier": "arXiv:1710.06922"
+      },
+      "license": "Open (paper)",
+      "distribution": "arXiv",
+      "temporal_coverage": "2017",
+      "related_assets": [
+        "vault:conlang-d07",
+        "vault:conlang-a01"
+      ],
+      "strategic_value": "Concrete precedent for conlangs as low-resource MT testbeds.",
+      "metrics": [
+        {
+          "name": "klingon_captions",
+          "value": 15000,
+          "as_of": "2017",
+          "evidence_tier": "V",
+          "source": "paper methodology"
+        },
+        {
+          "name": "rare_word_cutoff",
+          "value": "words occurring under 5 times discarded",
+          "as_of": "2017",
+          "evidence_tier": "V",
+          "source": "paper methodology"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-d07"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b01",
+      "asset_name": "Duolingo Conlang Courses",
+      "asset_url": "https://www.duolingo.com/courses",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Largest language-learning platform; carries High Valyrian and Klingon (Esperanto at the auxlang boundary).",
+      "tags": [
+        "Duolingo",
+        "High Valyrian",
+        "Klingon",
+        "learning",
+        "distribution"
+      ],
+      "provenance": {
+        "owner": "Duolingo, Inc.",
+        "author": "David J. Peterson (HV); KLI (Klingon)",
+        "published_date": "Klingon 2018-03-15; HV 2019",
+        "identifier": "duolingo.com"
+      },
+      "license": "Proprietary platform; franchise-licensed content",
+      "distribution": "Web; iOS/Android",
+      "temporal_coverage": "2018-2026",
+      "related_assets": [
+        "vault:conlang-b02",
+        "vault:conlang-a06"
+      ],
+      "strategic_value": "Dominant conlang distribution channel and largest audience funnel; all metrics vendor self-reported.",
+      "metrics": [
+        {
+          "name": "high_valyrian_learners_total",
+          "value": "~1.06M",
+          "as_of": "2025-06-23 (frozen)",
+          "evidence_tier": "S",
+          "source": "duolingo.com/courses/all; counters frozen"
+        },
+        {
+          "name": "high_valyrian_active_learners",
+          "value": 514000,
+          "as_of": "2022",
+          "evidence_tier": "S",
+          "source": "blog.duolingo.com; active-learner figure, not total"
+        },
+        {
+          "name": "klingon_learners_total",
+          "value": "~297K",
+          "as_of": "2025-06-23 (frozen)",
+          "evidence_tier": "S",
+          "source": "duolingo.com/courses/all"
+        },
+        {
+          "name": "hotd_update_words_added",
+          "value": 159,
+          "as_of": "2022",
+          "evidence_tier": "S",
+          "source": "blog.duolingo.com"
+        },
+        {
+          "name": "klingon_words_learned",
+          "value": "~1533",
+          "as_of": "2024",
+          "evidence_tier": "U",
+          "source": "duome.eu tracker"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "teaches",
+          "target": "lang:high-valyrian"
+        },
+        {
+          "relation": "teaches",
+          "target": "lang:klingon"
+        }
+      ],
+      "evidence_tier": "S",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11",
+      "notes": "Public counters frozen since 2025-06-23; metrics decayed. Klingon course closed to new users."
+    },
+    {
+      "asset_id": "vault:conlang-b02",
+      "asset_name": "Klingon Language Institute (kli.org)",
+      "asset_url": "https://www.kli.org/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Canon-guarding institution for Klingon: new-word ledger, HolQeD journal (1992-2004), annual qep'a', certification program.",
+      "tags": [
+        "KLI",
+        "Klingon",
+        "institution",
+        "canon"
+      ],
+      "provenance": {
+        "owner": "Klingon Language Institute (non-profit)",
+        "author": "Founded by Lawrence M. Schoen",
+        "published_date": "1992",
+        "identifier": "kli.org; ISSN 1061-2327 (HolQeD)"
+      },
+      "license": "Organizational content; fair-use community",
+      "distribution": "Web; print journal archive; events",
+      "temporal_coverage": "1992-2026",
+      "related_assets": [
+        "vault:conlang-a02",
+        "vault:conlang-a01",
+        "vault:conlang-d07"
+      ],
+      "strategic_value": "The archetypal guards_canon_of node; partner to Duolingo and Microsoft.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "guards_canon_of",
+          "target": "lang:klingon"
+        },
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-a02"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b03",
+      "asset_name": "Omniglot",
+      "asset_url": "https://www.omniglot.com/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Encyclopedia of writing systems and languages; central cross-franchise reference hub for constructed and fictional scripts.",
+      "tags": [
+        "scripts",
+        "writing-systems",
+        "reference",
+        "conscripts"
+      ],
+      "provenance": {
+        "owner": "Simon Ager",
+        "author": "Simon Ager",
+        "published_date": "1998",
+        "identifier": "omniglot.com"
+      },
+      "license": "Creator-owned; ad/affiliate/Patreon supported",
+      "distribution": "Web",
+      "temporal_coverage": "1998-2026",
+      "related_assets": [
+        "vault:conlang-c04"
+      ],
+      "strategic_value": "Best cross-franchise script-reference aggregator.",
+      "metrics": [
+        {
+          "name": "language_profiles",
+          "value": "2200+",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site self-report"
+        },
+        {
+          "name": "writing_systems",
+          "value": 371,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site self-report"
+        },
+        {
+          "name": "constructed_scripts",
+          "value": "1137+",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site self-report; order corroborated by Wikipedia"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-c04"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "creator-owned",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b04",
+      "asset_name": "LearnNavi.org",
+      "asset_url": "https://learnnavi.org/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Community organization invited by Paul Frommer to co-develop Na'vi; hosts the authoritative dictionary, audio, and lessons.",
+      "tags": [
+        "Na'vi",
+        "Avatar",
+        "institution",
+        "community"
+      ],
+      "provenance": {
+        "owner": "LearnNavi community",
+        "author": "Community",
+        "published_date": "2009-2026",
+        "identifier": "learnnavi.org"
+      },
+      "license": "Fair-use community",
+      "distribution": "Web; Discord; tooling (Eana Eltu)",
+      "temporal_coverage": "2009-2026",
+      "related_assets": [
+        "vault:conlang-a05"
+      ],
+      "strategic_value": "Best-practice creator-community hosts and teaches node; live canon feed from naviteri.org.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-a05"
+        },
+        {
+          "relation": "teaches",
+          "target": "lang:navi"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b05",
+      "asset_name": "Language Creation Society (LCS)",
+      "asset_url": "https://conlang.org/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "The professional body of conlanging; staffed HBO's Dothraki search, runs Fiat Lingua, Lexember, and the LCC conferences.",
+      "tags": [
+        "LCS",
+        "profession",
+        "institution",
+        "conlanging"
+      ],
+      "provenance": {
+        "owner": "Language Creation Society (non-profit, San Diego)",
+        "author": "Founded 2007; historically led by Sai Emrys",
+        "published_date": "2007",
+        "identifier": "conlang.org"
+      },
+      "license": "Organizational content",
+      "distribution": "Web; events; journal",
+      "temporal_coverage": "2007-2026",
+      "related_assets": [
+        "vault:conlang-b06"
+      ],
+      "strategic_value": "The field's professional-network hub connecting creators to studios.",
+      "metrics": [
+        {
+          "name": "dothraki_search_applicants",
+          "value": "30+",
+          "as_of": "2009",
+          "evidence_tier": "C",
+          "source": "widely reported production history"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-b06"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b06",
+      "asset_name": "Fiat Lingua",
+      "asset_url": "https://fiatlingua.org/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "The de facto journal of conlang scholarship; monthly CC-licensed PDF archive since 2011.",
+      "tags": [
+        "journal",
+        "scholarship",
+        "conlanging",
+        "LCS"
+      ],
+      "provenance": {
+        "owner": "Language Creation Society",
+        "author": "Editorial team",
+        "published_date": "2011",
+        "identifier": "fiatlingua.org"
+      },
+      "license": "CC-licensed articles",
+      "distribution": "Web; PDF archive",
+      "temporal_coverage": "2011-2026",
+      "related_assets": [
+        "vault:conlang-b05"
+      ],
+      "strategic_value": "The domain's citable scholarly record and natural cites backbone.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "cites",
+          "target": "field:conlang-scholarship"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b07",
+      "asset_name": "Publisher Channels (Pocket Books; Penguin Random House / Living Language)",
+      "asset_url": "https://www.penguinrandomhouse.com/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "The licensed, ISBN-anchored commercial layer distributing the canonical printed conlang assets.",
+      "tags": [
+        "publishing",
+        "ISBN",
+        "licensed",
+        "distribution"
+      ],
+      "provenance": {
+        "owner": "Simon & Schuster; Penguin Random House",
+        "author": "Various",
+        "published_date": "1985-2015",
+        "identifier": "ISBN-anchored catalog"
+      },
+      "license": "All rights reserved (licensed products)",
+      "distribution": "Print; audio; retail",
+      "temporal_coverage": "1985-2026",
+      "related_assets": [
+        "vault:conlang-a01",
+        "vault:conlang-d09",
+        "vault:conlang-d10"
+      ],
+      "strategic_value": "Where franchise IP and conlang data formally intersect.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-a01"
+        },
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-d09"
+        },
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-d10"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b08",
+      "asset_name": "App Stores (Google Play / Apple App Store)",
+      "asset_url": "https://play.google.com/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Distribution channel for conlang apps, principally boQwI'.",
+      "tags": [
+        "apps",
+        "distribution",
+        "mobile"
+      ],
+      "provenance": {
+        "owner": "Google; Apple",
+        "author": "Platform operators",
+        "published_date": "ongoing",
+        "identifier": "store listings"
+      },
+      "license": "Platform terms; per-app rights vary",
+      "distribution": "Mobile app stores",
+      "temporal_coverage": "2011-2026",
+      "related_assets": [
+        "vault:conlang-d06"
+      ],
+      "strategic_value": "The mobile distribution layer; all figures are store self-reports.",
+      "metrics": [
+        {
+          "name": "boqwi_downloads",
+          "value": "100K+",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "Google Play listing"
+        },
+        {
+          "name": "boqwi_rating",
+          "value": "4.4 stars (749 reviews)",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "Google Play listing"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "hosts",
+          "target": "vault:conlang-d06"
+        }
+      ],
+      "evidence_tier": "S",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-b09",
+      "asset_name": "Fan Wikis (Fandom, Wiktionary, Wikibooks, Linguifex)",
+      "asset_url": "https://linguifex.com/",
+      "asset_type": "schema:Service",
+      "category": "B-Distribution-Hosting",
+      "description": "Distributed hosting of conlang lexicons and grammars across wiki platforms.",
+      "tags": [
+        "wikis",
+        "community",
+        "hosting",
+        "fragmentation"
+      ],
+      "provenance": {
+        "owner": "Various platforms and communities",
+        "author": "Community",
+        "published_date": "ongoing",
+        "identifier": "multiple"
+      },
+      "license": "Mixed wiki licenses; fair-use content",
+      "distribution": "Web wikis",
+      "temporal_coverage": "2005-2026",
+      "related_assets": [],
+      "strategic_value": "High reach, low provenance discipline; the fragmentation problem in microcosm.",
+      "metrics": [
+        {
+          "name": "linguifex_language_pages",
+          "value": 982,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site category count self-report"
+        },
+        {
+          "name": "linguifex_conlang_pages",
+          "value": 522,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "site category count self-report"
+        }
+      ],
+      "edges": [],
+      "evidence_tier": "U",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-c01",
+      "asset_name": "Tengwar & Cirth (Tolkien's Scripts)",
+      "asset_url": "https://tolkiengateway.net/wiki/Tengwar",
+      "asset_type": "schema:CreativeWork",
+      "category": "C-Visualizations-Schematics",
+      "description": "Tolkien's own writing systems with canonical charts; indexed by Mellonath Daeron's DTS/DCS specimina catalogs.",
+      "tags": [
+        "Tengwar",
+        "Cirth",
+        "Tolkien",
+        "script"
+      ],
+      "provenance": {
+        "owner": "Tolkien Estate (IP)",
+        "author": "J.R.R. Tolkien",
+        "published_date": "1955 (LotR appendices)",
+        "identifier": "DTS/DCS specimina"
+      },
+      "license": "All rights reserved (estate); scholarly reproduction fair-use",
+      "distribution": "Print appendices; scholarship",
+      "temporal_coverage": "1955-2026",
+      "related_assets": [
+        "vault:conlang-a03",
+        "vault:conlang-c05"
+      ],
+      "strategic_value": "The most-reproduced conlang visualization set; core of any script-chart product.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:tolkien-languages"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-c02",
+      "asset_name": "Klingon pIqaD",
+      "asset_url": "https://www.kli.org/about-klingon/klingon-writing/",
+      "asset_type": "schema:CreativeWork",
+      "category": "C-Visualizations-Schematics",
+      "description": "The Klingon writing system, decorative on screen with Latin transliteration as working orthography; digital support in Bing Translator and dCode.",
+      "tags": [
+        "pIqaD",
+        "Klingon",
+        "script"
+      ],
+      "provenance": {
+        "owner": "Paramount/CBS (design); KLI (systematization)",
+        "author": "Franchise design; KLI community",
+        "published_date": "1980s-2026",
+        "identifier": "kli.org"
+      },
+      "license": "Franchise IP; community systematization",
+      "distribution": "Fonts; translator output; reference pages",
+      "temporal_coverage": "1984-2026",
+      "related_assets": [
+        "vault:conlang-d07",
+        "vault:conlang-b02"
+      ],
+      "strategic_value": "Iconic franchise script with digital tooling support.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:klingon"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-c03",
+      "asset_name": "Dovahzul Runes",
+      "asset_url": "https://www.thuum.org/learn/",
+      "asset_type": "schema:CreativeWork",
+      "category": "C-Visualizations-Schematics",
+      "description": "The dragon runic script carved on Skyrim's Word Walls; per-word rune spellings in the Thuum.org Fourth Edition dictionary; fan fonts exist.",
+      "tags": [
+        "Dovahzul",
+        "runes",
+        "Skyrim",
+        "script"
+      ],
+      "provenance": {
+        "owner": "Bethesda Softworks",
+        "author": "Bethesda Game Studios",
+        "published_date": "2011",
+        "identifier": "thuum.org spellings; Kazmirus font"
+      },
+      "license": "Franchise IP; fan fonts fair-use",
+      "distribution": "In-game; dictionary spellings; fonts",
+      "temporal_coverage": "2011-2026",
+      "related_assets": [
+        "vault:conlang-a07"
+      ],
+      "strategic_value": "Game-native script with strong visual-merchandise potential.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:dovahzul"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-c04",
+      "asset_name": "Chakobsa Abugida (Dune films)",
+      "asset_url": "https://www.omniglot.com/conscripts/chakobsa.htm",
+      "asset_type": "schema:CreativeWork",
+      "category": "C-Visualizations-Schematics",
+      "description": "Left-to-right abugida designed for the 2021/2024 films; consonant glyphs change shape by attached vowel; official typeable font.",
+      "tags": [
+        "Chakobsa",
+        "abugida",
+        "Dune",
+        "script"
+      ],
+      "provenance": {
+        "owner": "Legendary (IP)",
+        "author": "David J. and Jessie Peterson",
+        "published_date": "2021-2024",
+        "identifier": "Omniglot conscript page"
+      },
+      "license": "Franchise IP",
+      "distribution": "Film; font; reference page",
+      "temporal_coverage": "2021-2026",
+      "related_assets": [
+        "vault:conlang-a09",
+        "vault:conlang-b03"
+      ],
+      "strategic_value": "Newest canonical constructed script with an official font.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:chakobsa"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-c05",
+      "asset_name": "Tolkien Language Family Trees",
+      "asset_url": "https://eldamo.org/",
+      "asset_type": "schema:CreativeWork",
+      "category": "C-Visualizations-Schematics",
+      "description": "Tolkien's own diagrams of Elvish descent, reflected in Eldamo's period model and Fauskanger's evolution analyses.",
+      "tags": [
+        "Tolkien",
+        "family-tree",
+        "diagram",
+        "Elvish"
+      ],
+      "provenance": {
+        "owner": "Tolkien Estate (originals)",
+        "author": "J.R.R. Tolkien",
+        "published_date": "1930s-1973",
+        "identifier": "Eldamo period model; Ardalambion analyses"
+      },
+      "license": "Estate IP; scholarly reproduction fair-use",
+      "distribution": "Print; scholarship; data model",
+      "temporal_coverage": "1930-2026",
+      "related_assets": [
+        "vault:conlang-a03",
+        "vault:conlang-d08"
+      ],
+      "strategic_value": "The canonical derived_from visualization; a template for conlang genealogy diagrams.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:tolkien-languages"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d01",
+      "asset_name": "PolyGlot (Language Construction Kit)",
+      "asset_url": "https://draquet.github.io/PolyGlot/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Open-source desktop conlang toolkit: lexicon, grammar guide, auto conjugation, orthography, etymology trees, word generator, audio.",
+      "tags": [
+        "conlang-tool",
+        "desktop",
+        "open-source",
+        "lexicon"
+      ],
+      "provenance": {
+        "owner": "Draque Thompson",
+        "author": "Draque Thompson",
+        "published_date": "ongoing",
+        "identifier": "github.com/DraqueT/PolyGlot"
+      },
+      "license": "MIT",
+      "distribution": "Windows/macOS/Linux desktop",
+      "temporal_coverage": "2014-2026",
+      "related_assets": [],
+      "strategic_value": "Leading free and open desktop documentation tool; natural export target for a standardized format.",
+      "metrics": [],
+      "edges": [],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d02",
+      "asset_name": "Vulgar (Vulgarlang)",
+      "asset_url": "https://www.vulgarlang.com/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "One-click commercial generator of phonology, grammar, and lexicon, with a sound-change tool and online dictionary deployment.",
+      "tags": [
+        "conlang-tool",
+        "generator",
+        "commercial"
+      ],
+      "provenance": {
+        "owner": "Linguistx",
+        "author": "Linguistx",
+        "published_date": "ongoing",
+        "identifier": "vulgarlang.com"
+      },
+      "license": "Proprietary freemium",
+      "distribution": "Web app; paid license",
+      "temporal_coverage": "2017-2026",
+      "related_assets": [],
+      "strategic_value": "Dominant commercial generator; strong for rapid worldbuilding.",
+      "metrics": [
+        {
+          "name": "demo_word_cap",
+          "value": 200,
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "vendor pricing page"
+        },
+        {
+          "name": "paid_word_cap",
+          "value": "4000+",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "vendor pricing page"
+        }
+      ],
+      "edges": [],
+      "evidence_tier": "C",
+      "rights_flag": "creator-owned",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d03",
+      "asset_name": "ConWorkShop (CWS)",
+      "asset_url": "https://conworkshop.com/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Web-based conlang creation and community platform with courses and the CALS cross-conlang typological atlas.",
+      "tags": [
+        "conlang-tool",
+        "community",
+        "typology",
+        "CALS"
+      ],
+      "provenance": {
+        "owner": "ConWorkShop community",
+        "author": "Community",
+        "published_date": "ongoing",
+        "identifier": "conworkshop.com"
+      },
+      "license": "Community platform",
+      "distribution": "Web",
+      "temporal_coverage": "2014-2026",
+      "related_assets": [],
+      "strategic_value": "The community and analytics layer; CALS is a rare structured typological dataset for conlangs.",
+      "metrics": [],
+      "edges": [],
+      "evidence_tier": "U",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d04",
+      "asset_name": "Zompist SCA2 (Sound Change Applier 2)",
+      "asset_url": "https://www.zompist.com/sca2.html",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Browser-based tool applying ordered sound changes to a lexicon to derive descendants or reconstruct proto-forms.",
+      "tags": [
+        "sound-change",
+        "diachronic",
+        "conlang-tool"
+      ],
+      "provenance": {
+        "owner": "Mark Rosenfelder",
+        "author": "Mark Rosenfelder",
+        "published_date": "2012",
+        "identifier": "zompist.com/sca2.html"
+      },
+      "license": "Freely provided",
+      "distribution": "Browser; Unicode",
+      "temporal_coverage": "2012-2026",
+      "related_assets": [
+        "vault:conlang-d05"
+      ],
+      "strategic_value": "The canonical diachronic tool and reference implementation.",
+      "metrics": [],
+      "edges": [],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d05",
+      "asset_name": "Lexurgy",
+      "asset_url": "https://www.lexurgy.com/sc",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Successor-class sound-change applier and word generator with multigraph support, suprasegmentals, and daughter-language derivation.",
+      "tags": [
+        "sound-change",
+        "conlang-tool",
+        "active-development"
+      ],
+      "provenance": {
+        "owner": "Brad Neimann (bradrn)",
+        "author": "Brad Neimann",
+        "published_date": "ongoing",
+        "identifier": "lexurgy.com"
+      },
+      "license": "Open source",
+      "distribution": "Web",
+      "temporal_coverage": "2020-2026",
+      "related_assets": [
+        "vault:conlang-d04"
+      ],
+      "strategic_value": "The modern power-user SCA.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-d04"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d06",
+      "asset_name": "boQwI' (Klingon Language Assistant)",
+      "asset_url": "https://github.com/De7vID/klingon-assistant-data",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Klingon lexicon, canon search, and grammar parser app, updated within days of qep'a' word reveals; open data repository.",
+      "tags": [
+        "Klingon",
+        "app",
+        "canon",
+        "open-data"
+      ],
+      "provenance": {
+        "owner": "Daniel L. Yonge-Mallo (De'vID)",
+        "author": "De'vID",
+        "published_date": "2011-2026",
+        "identifier": "Play/App Store; GitHub data repo"
+      },
+      "license": "Open-source data; app store distribution",
+      "distribution": "Android/iOS; GitHub",
+      "temporal_coverage": "2011-2026",
+      "related_assets": [
+        "vault:conlang-a01",
+        "vault:conlang-a02",
+        "vault:conlang-b08"
+      ],
+      "strategic_value": "Best-in-class living-canon dictionary app; model for canon-tracked repositories.",
+      "metrics": [
+        {
+          "name": "downloads",
+          "value": "100K+",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "Google Play listing"
+        },
+        {
+          "name": "advertised_dictionary_size",
+          "value": "3000+ words",
+          "as_of": "2026",
+          "evidence_tier": "S",
+          "source": "store description"
+        },
+        {
+          "name": "aggregated_lexicon_entries",
+          "value": 4221,
+          "as_of": "2018-09",
+          "evidence_tier": "S",
+          "source": "maintainer self-report"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-a02"
+        }
+      ],
+      "evidence_tier": "C",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d07",
+      "asset_name": "Microsoft Bing Klingon Machine Translation",
+      "asset_url": "https://www.microsoft.com/en-us/translator/blog/2013/05/14/announcing-klingon-for-bing-translator/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "First and only commercial-grade conlang MT engine, built with the KLI, Marc Okrand, and Microsoft engineer Eric Andeen; Latin and pIqaD output.",
+      "tags": [
+        "Klingon",
+        "machine-translation",
+        "Microsoft"
+      ],
+      "provenance": {
+        "owner": "Microsoft",
+        "author": "Microsoft Translator team with KLI and Okrand",
+        "published_date": "2013-05-14",
+        "identifier": "microsoft.com/translator"
+      },
+      "license": "Proprietary service",
+      "distribution": "Bing Translator; API",
+      "temporal_coverage": "2013-2026",
+      "related_assets": [
+        "vault:conlang-a11",
+        "vault:conlang-b02",
+        "vault:conlang-c02"
+      ],
+      "strategic_value": "The only commercial conlang MT; its pipeline seeded academic MT experiments.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "derived_from",
+          "target": "vault:conlang-a01"
+        },
+        {
+          "relation": "teaches",
+          "target": "lang:klingon"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d08",
+      "asset_name": "Ardalambion (+ Quenya Course)",
+      "asset_url": "https://ardalambion.net/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "The scholarly backbone of Elvish study: grammars, corpus analyses, the Quenya Course, and the Quettaparma Quenyallo wordlist.",
+      "tags": [
+        "Tolkien",
+        "Quenya",
+        "Sindarin",
+        "scholarship"
+      ],
+      "provenance": {
+        "owner": "Helge Kare Fauskanger",
+        "author": "Helge Kare Fauskanger",
+        "published_date": "1997",
+        "identifier": "ardalambion.net"
+      },
+      "license": "Scholarly fair-use",
+      "distribution": "Web; downloadable course",
+      "temporal_coverage": "1997-2026",
+      "related_assets": [
+        "vault:conlang-a03",
+        "vault:conlang-a04",
+        "vault:conlang-c05"
+      ],
+      "strategic_value": "Primary scholarly source feeding Eldamo and Elfdict.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "documents",
+          "target": "lang:tolkien-languages"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "fair-use-community",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d09",
+      "asset_name": "Living Language Dothraki",
+      "asset_url": "https://www.penguinrandomhouse.com/books/234739/living-language-dothraki-by-david-j-peterson/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Official conversational Dothraki course: 128-page guide plus one-hour audio CD, 500+ words and phrases including course-exclusive coinage.",
+      "tags": [
+        "Dothraki",
+        "course",
+        "licensed",
+        "audio"
+      ],
+      "provenance": {
+        "owner": "HBO (IP); Penguin Random House / Living Language (publisher)",
+        "author": "David J. Peterson",
+        "published_date": "2014-10-07",
+        "identifier": "ISBN:9780804160865"
+      },
+      "license": "All rights reserved (licensed product)",
+      "distribution": "Print + audio CD",
+      "temporal_coverage": "2014-2026",
+      "related_assets": [
+        "vault:conlang-a06",
+        "vault:conlang-b07"
+      ],
+      "strategic_value": "Canonical licensed learning product for a screen conlang; commercial precedent for the GamingToolset line.",
+      "metrics": [
+        {
+          "name": "course_vocabulary",
+          "value": "500+ words and phrases",
+          "as_of": "2014",
+          "evidence_tier": "V",
+          "source": "publisher specification"
+        }
+      ],
+      "edges": [
+        {
+          "relation": "teaches",
+          "target": "lang:dothraki"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "franchise-ip",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d10",
+      "asset_name": "The Art of Language Invention",
+      "asset_url": "https://www.penguinrandomhouse.com/books/316207/the-art-of-language-invention-by-david-j-peterson/",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "The definitive practitioner's manual for conlang construction, with companion online course and video series.",
+      "tags": [
+        "methodology",
+        "reference",
+        "Peterson",
+        "construction"
+      ],
+      "provenance": {
+        "owner": "Penguin (publisher)",
+        "author": "David J. Peterson",
+        "published_date": "2015",
+        "identifier": "ISBN:9780143126461"
+      },
+      "license": "All rights reserved",
+      "distribution": "Print; companion site",
+      "temporal_coverage": "2015-2026",
+      "related_assets": [
+        "vault:conlang-b07"
+      ],
+      "strategic_value": "The field's canonical methodology reference and citation anchor.",
+      "metrics": [],
+      "edges": [
+        {
+          "relation": "cites",
+          "target": "field:conlang-scholarship"
+        }
+      ],
+      "evidence_tier": "V",
+      "rights_flag": "creator-owned",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "asset_id": "vault:conlang-d11",
+      "asset_name": "ConlangCrafter (LLM conlang generation)",
+      "asset_url": "https://arxiv.org/pdf/2508.06094",
+      "asset_type": "schema:SoftwareApplication",
+      "category": "D-Technology-Tools",
+      "description": "Multi-stage LLM pipeline generating internally consistent, typologically diverse conlangs, treating model confabulation as a creative feature.",
+      "tags": [
+        "LLM",
+        "generation",
+        "NLP",
+        "research"
+      ],
+      "provenance": {
+        "owner": "Tel Aviv University; UC Berkeley",
+        "author": "Alper, Yanuka, Giryes, Begus",
+        "published_date": "2025",
+        "identifier": "arXiv:2508.06094; conlangcrafter.github.io"
+      },
+      "license": "Open (paper)",
+      "distribution": "arXiv; project site",
+      "temporal_coverage": "2025-2026",
+      "related_assets": [
+        "vault:conlang-a10"
+      ],
+      "strategic_value": "State of the art in AI conlang generation; the emerging AI-tool frontier.",
+      "metrics": [],
+      "edges": [],
+      "evidence_tier": "V",
+      "rights_flag": "open-license",
+      "last_updated": "2026-09-11"
+    }
+  ]
+}

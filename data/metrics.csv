@@ -1,0 +1,46 @@
+asset_id,asset_name,metric_name,value,as_of,evidence_tier,source
+vault:conlang-a01,The Klingon Dictionary (TKD),words_1985_edition,1586,1985,S,"Goodreads review; order corroborated by Wikipedia (~1,800)"
+vault:conlang-a01,The Klingon Dictionary (TKD),words_1992_edition,1889,1992,S,Goodreads review (+219 words as addendum)
+vault:conlang-a01,The Klingon Dictionary (TKD),modern_canon_popular,~3000,2026,U,popular consensus figure
+vault:conlang-a01,The Klingon Dictionary (TKD),aggregated_lexicon_entries,4221,2018-09,S,maintainer De'vID self-report
+vault:conlang-a02,KLI New Klingon Words List,acceptance_rule,confirmed Okrand sources only,2026,V,kli.org policy
+vault:conlang-a03,Eldamo: An Elvish Lexicon,lexical_entries,tens of thousands,2026,S,Fenopaedia description; no exact integer published
+vault:conlang-a03,Eldamo: An Elvish Lexicon,new_tolkien_words_since,none since v0.8.6 (2023-05),2026,V,eldamo.org version notes
+vault:conlang-a04,Parf Edhellen / Elfdict,words,136992,2026,S,site self-report
+vault:conlang-a04,Parf Edhellen / Elfdict,active_glosses,49436,2026,S,site self-report
+vault:conlang-a05,Na'vi-English Dictionary (LearnNavi.org),words_wikibooks_print,2656,2024,S,Wikibooks print version
+vault:conlang-a05,Na'vi-English Dictionary (LearnNavi.org),words_attested_2026,2000+,2026,U,secondary sources
+vault:conlang-a05,Na'vi-English Dictionary (LearnNavi.org),seed_vocabulary,~500 Frommer words,2010-03,C,project history
+vault:conlang-a06,Dothraki Dictionary (languageinvention.com),words_2011,3163,2011-09,C,"Wired, cited on Wikipedia"
+vault:conlang-a06,Dothraki Dictionary (languageinvention.com),words_common_citation,3000+,2026,C,multiple secondary sources
+vault:conlang-a06,Dothraki Dictionary (languageinvention.com),delivered_before_shooting,1700+,2010,C,"production history, multiple sources"
+vault:conlang-a07,Dovahzul Dictionary (Thuum.org),canonical_words,647,2024,V,Thuum.org Fifth Edition print dictionary
+vault:conlang-a07,Dovahzul Dictionary (Thuum.org),expanded_fan_words,4000+,2014,S,Thuum.org Third Edition self-description; decayed
+vault:conlang-a07,Dovahzul Dictionary (Thuum.org),official_shout_words,~40,2011,U,"in-game translations, single-source"
+vault:conlang-a08,Belter Creole Dictionary (lang belta),words_created,1000+,2019,C,"Ars Technica, cited on Wikipedia"
+vault:conlang-a09,Chakobsa / Neo-Chakobsa (Dune films),herbert_base_words,~123 marked Fremen words,1965-1985,U,single-source census
+vault:conlang-a09,Chakobsa / Neo-Chakobsa (Dune films),full_grammar_lexicon_script,yes,2024,C,multiple independent coverage
+vault:conlang-a10,ConlangBench (conlang NLP benchmark),conlangs_covered,21,2026,S,abstract self-report
+vault:conlang-a10,ConlangBench (conlang NLP benchmark),parallel_sentence_pairs,21M+ (430K non-Esperanto),2026,S,abstract self-report
+vault:conlang-a10,ConlangBench (conlang NLP benchmark),vocabulary_entries,321K,2026,S,abstract self-report
+vault:conlang-a11,Emergent Translation Klingon MT Dataset,klingon_captions,15000,2017,V,paper methodology
+vault:conlang-a11,Emergent Translation Klingon MT Dataset,rare_word_cutoff,words occurring under 5 times discarded,2017,V,paper methodology
+vault:conlang-b01,Duolingo Conlang Courses,high_valyrian_learners_total,~1.06M,2025-06-23 (frozen),S,duolingo.com/courses/all; counters frozen
+vault:conlang-b01,Duolingo Conlang Courses,high_valyrian_active_learners,514000,2022,S,"blog.duolingo.com; active-learner figure, not total"
+vault:conlang-b01,Duolingo Conlang Courses,klingon_learners_total,~297K,2025-06-23 (frozen),S,duolingo.com/courses/all
+vault:conlang-b01,Duolingo Conlang Courses,hotd_update_words_added,159,2022,S,blog.duolingo.com
+vault:conlang-b01,Duolingo Conlang Courses,klingon_words_learned,~1533,2024,U,duome.eu tracker
+vault:conlang-b03,Omniglot,language_profiles,2200+,2026,S,site self-report
+vault:conlang-b03,Omniglot,writing_systems,371,2026,S,site self-report
+vault:conlang-b03,Omniglot,constructed_scripts,1137+,2026,S,site self-report; order corroborated by Wikipedia
+vault:conlang-b05,Language Creation Society (LCS),dothraki_search_applicants,30+,2009,C,widely reported production history
+vault:conlang-b08,App Stores (Google Play / Apple App Store),boqwi_downloads,100K+,2026,S,Google Play listing
+vault:conlang-b08,App Stores (Google Play / Apple App Store),boqwi_rating,4.4 stars (749 reviews),2026,S,Google Play listing
+vault:conlang-b09,"Fan Wikis (Fandom, Wiktionary, Wikibooks, Linguifex)",linguifex_language_pages,982,2026,S,site category count self-report
+vault:conlang-b09,"Fan Wikis (Fandom, Wiktionary, Wikibooks, Linguifex)",linguifex_conlang_pages,522,2026,S,site category count self-report
+vault:conlang-d02,Vulgar (Vulgarlang),demo_word_cap,200,2026,S,vendor pricing page
+vault:conlang-d02,Vulgar (Vulgarlang),paid_word_cap,4000+,2026,S,vendor pricing page
+vault:conlang-d06,boQwI' (Klingon Language Assistant),downloads,100K+,2026,S,Google Play listing
+vault:conlang-d06,boQwI' (Klingon Language Assistant),advertised_dictionary_size,3000+ words,2026,S,store description
+vault:conlang-d06,boQwI' (Klingon Language Assistant),aggregated_lexicon_entries,4221,2018-09,S,maintainer self-report
+vault:conlang-d09,Living Language Dothraki,course_vocabulary,500+ words and phrases,2014,V,publisher specification

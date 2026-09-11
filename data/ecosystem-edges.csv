@@ -1,0 +1,38 @@
+source_asset_id,source_asset_name,relation,target
+vault:conlang-a01,The Klingon Dictionary (TKD),documents,lang:klingon
+vault:conlang-a02,KLI New Klingon Words List,derived_from,vault:conlang-a01
+vault:conlang-a02,KLI New Klingon Words List,documents,lang:klingon
+vault:conlang-a03,Eldamo: An Elvish Lexicon,documents,lang:tolkien-languages
+vault:conlang-a04,Parf Edhellen / Elfdict,derived_from,vault:conlang-a03
+vault:conlang-a04,Parf Edhellen / Elfdict,derived_from,vault:conlang-d08
+vault:conlang-a05,Na'vi-English Dictionary (LearnNavi.org),documents,lang:navi
+vault:conlang-a06,Dothraki Dictionary (languageinvention.com),documents,lang:dothraki
+vault:conlang-a07,Dovahzul Dictionary (Thuum.org),guards_canon_of,lang:dovahzul
+vault:conlang-a08,Belter Creole Dictionary (lang belta),documents,lang:belter-creole
+vault:conlang-a09,Chakobsa / Neo-Chakobsa (Dune films),documents,lang:chakobsa
+vault:conlang-a11,Emergent Translation Klingon MT Dataset,derived_from,vault:conlang-d07
+vault:conlang-b01,Duolingo Conlang Courses,teaches,lang:high-valyrian
+vault:conlang-b01,Duolingo Conlang Courses,teaches,lang:klingon
+vault:conlang-b02,Klingon Language Institute (kli.org),guards_canon_of,lang:klingon
+vault:conlang-b02,Klingon Language Institute (kli.org),hosts,vault:conlang-a02
+vault:conlang-b03,Omniglot,hosts,vault:conlang-c04
+vault:conlang-b04,LearnNavi.org,hosts,vault:conlang-a05
+vault:conlang-b04,LearnNavi.org,teaches,lang:navi
+vault:conlang-b05,Language Creation Society (LCS),hosts,vault:conlang-b06
+vault:conlang-b06,Fiat Lingua,cites,field:conlang-scholarship
+vault:conlang-b07,Publisher Channels (Pocket Books; Penguin Random House / Living Language),hosts,vault:conlang-a01
+vault:conlang-b07,Publisher Channels (Pocket Books; Penguin Random House / Living Language),hosts,vault:conlang-d09
+vault:conlang-b07,Publisher Channels (Pocket Books; Penguin Random House / Living Language),hosts,vault:conlang-d10
+vault:conlang-b08,App Stores (Google Play / Apple App Store),hosts,vault:conlang-d06
+vault:conlang-c01,Tengwar & Cirth (Tolkien's Scripts),documents,lang:tolkien-languages
+vault:conlang-c02,Klingon pIqaD,documents,lang:klingon
+vault:conlang-c03,Dovahzul Runes,documents,lang:dovahzul
+vault:conlang-c04,Chakobsa Abugida (Dune films),documents,lang:chakobsa
+vault:conlang-c05,Tolkien Language Family Trees,documents,lang:tolkien-languages
+vault:conlang-d05,Lexurgy,derived_from,vault:conlang-d04
+vault:conlang-d06,boQwI' (Klingon Language Assistant),derived_from,vault:conlang-a02
+vault:conlang-d07,Microsoft Bing Klingon Machine Translation,derived_from,vault:conlang-a01
+vault:conlang-d07,Microsoft Bing Klingon Machine Translation,teaches,lang:klingon
+vault:conlang-d08,Ardalambion (+ Quenya Course),documents,lang:tolkien-languages
+vault:conlang-d09,Living Language Dothraki,teaches,lang:dothraki
+vault:conlang-d10,The Art of Language Invention,cites,field:conlang-scholarship

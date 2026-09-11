@@ -1,0 +1,119 @@
+# BHIL-VAULT-CONLANG
+
+**Verified Asset Universe & Landscape Taxonomy: Constructed Languages from Popular Fiction**
+
+A metadata-rich, evidence-graded, machine-readable catalog of the data assets, institutions, visualizations, and technologies of the fictional-language (conlang) domain. Built with the BHIL VAULT framework by the Barry Hurd Intelligence Lab.
+
+> Human-Directed. AI-Enabled. Commercially Tested.
+
+## What this repository is
+
+The conlang world is mature in content but primitive in structure. Its best holdings are creator-published dictionaries (The Klingon Dictionary, Living Language Dothraki) and a handful of authoritative fan-scholarship databases (kli.org, Eldamo, Elfdict, LearnNavi.org, Thuum.org). None of them carry standardized machine-readable metadata. This repository closes that gap for the domain's most significant assets, normalized into 36 catalog records:
+
+- **A canonical JSON-LD catalog** (`data/catalog.json`) mapped to DCAT v3, schema.org/Dataset, and MLCommons Croissant
+- **Four category deep-dives** in `catalog/` with full asset cards, metrics, and evidence tiers
+- **Derived CSV exports** for spreadsheet and BI use, generated from the canonical JSON (never hand-edited)
+- **A JSON Schema** (`data/schema/vault-asset.schema.json`) any conlang project can adopt
+- **Stdlib-only Python tooling** to validate, roll up evidence tiers, and detect drift
+
+## The four categories
+
+| Code | Category | Assets | Examples |
+|---|---|---|---|
+| A | Datasets & Benchmarks | 11 | The Klingon Dictionary, Eldamo, Thuum.org dictionary, ConlangBench |
+| B | Distribution & Hosting | 9 | Duolingo, KLI, Omniglot, Language Creation Society, Fiat Lingua |
+| C | Visualizations & Schematics | 5 | Tengwar/Cirth charts, pIqaD, Dovahzul runes, Chakobsa abugida |
+| D | Technology & Tools | 11 | PolyGlot, Vulgar, SCA2, Lexurgy, boQwI', Bing Klingon MT |
+
+Note: Thuum.org and LearnNavi.org play dual roles (dataset and institution); each holds one record with the dual role noted. The originating research report rolled up 31 assets; normalization for this repository (splitting grouped entries, merging role duplicates) yields 36 records. The catalog is the truth; run the roll-up script to verify.
+
+## Evidence discipline
+
+Every asset and every metric carries one of five inline tiers. No claim ships untagged.
+
+| Tag | Tier | Meaning |
+|---|---|---|
+| `[V]` | VERIFIED | Authoritative primary source: creator-published dictionary, official spec, peer-reviewed paper |
+| `[C]` | CORROBORATED | Two or more independent non-owner sources agree |
+| `[S]` | STATED | Owner or vendor self-description or self-reported metric. Hard quarantine. |
+| `[U]` | UNCORROBORATED | Single non-owner source |
+| `[I]` | INFERENCE | Analytical conclusion with a reproducible reasoning chain |
+
+Roll-up for this catalog: 53% VERIFIED, 33% CORROBORATED, 6% STATED, 8% UNCORROBORATED, 0% INFERENCE at the asset level (86% primary plus corroborated). At the metric level, 60% of quantitative claims sit in STATED quarantine, which is the honest shape of a vendor-metric-heavy domain. Run `python3 scripts/tier_rollup.py` to regenerate.
+
+## Quick start
+
+```bash
+git clone https://github.com/PolymathWizard/BHIL-VAULT-CONLANG.git
+cd BHIL-VAULT-CONLANG
+
+# Validate the canonical catalog against the schema and house rules
+python3 scripts/validate_catalog.py
+
+# Regenerate derived CSVs from the canonical JSON
+python3 scripts/build_derived.py
+
+# Evidence tier roll-up
+python3 scripts/tier_rollup.py
+
+# House style gate (no em or en dashes in prose)
+python3 scripts/dash_gate.py
+```
+
+No pip installs required. Everything runs on the Python 3 standard library.
+
+## Repository map
+
+```
+BHIL-VAULT-CONLANG/
+  README.md                  This file
+  docs/
+    00-scope-lock.md         VLT-0 scope lock sheet
+    01-taxonomy-ontology.md  VLT-1 taxonomy, ontology, metadata crosswalk
+    02-evidence-tiers.md     VLT-7 grading rules and roll-up
+    03-strategic-landscape.md VLT-8 hubs, gaps, ecosystem map
+    04-commercialization.md  VAULT SKU mapping and product composition
+    05-methodology.md        How this catalog was built and is maintained
+  catalog/
+    a-datasets-benchmarks.md
+    b-distribution-hosting.md
+    c-visualizations-schematics.md
+    d-technology-tools.md
+  data/
+    catalog.json             CANONICAL SOURCE. All derived artifacts flow from here.
+    catalog.csv              Derived. Do not hand-edit.
+    metrics.csv              Derived. Do not hand-edit.
+    ecosystem-edges.csv      Derived. Do not hand-edit.
+    checksums.sha256         Drift gate manifest for derived artifacts
+    schema/vault-asset.schema.json
+  scripts/                   Stdlib-only Python tooling
+  resources/                 Creators, institutions, reading list
+  launch/                    GitHub descriptions and LinkedIn collateral
+```
+
+## Canonical source rule
+
+`data/catalog.json` is the single source of truth. The CSVs and the tier roll-up table are derived artifacts, regenerated by `scripts/build_derived.py` and guarded by SHA-256 checksums in `data/checksums.sha256`. Hand edits to derived files fail CI. To change the catalog, edit the JSON, rerun the build, and commit both.
+
+## Rights and licensing
+
+- **Code and schemas:** MIT (see `LICENSE`)
+- **Content and catalog data:** CC BY 4.0 (see `LICENSE-CONTENT`)
+- **The languages themselves:** many are franchise-owned IP (Paramount/CBS, Disney, HBO, Bethesda, Legendary). This catalog describes and cites assets; it reproduces no lexicons. Every asset carries a rights flag. Nothing here is a rights clearance. See `docs/04-commercialization.md`.
+
+## Relationship to the BHIL product line
+
+This repository is the asset-catalog substrate beneath two sibling deliverables:
+
+- **BABEL** (BHIL Skills Master): phrase-level translation and cultural-linguistics analysis
+- **The Traveler's Phrasebook** (GamingToolset): the published 10-language tabletop supplement
+
+VAULT catalogs the universe those products draw from.
+
+## Citation
+
+See `CITATION.cff`. Short form: Barry Hurd Intelligence Lab, *BHIL-VAULT-CONLANG: Verified Asset Universe of Fictional Constructed Languages*, v1.0.0, 2026.
+
+## Contributing
+
+Corrections and new assets welcome. Read `CONTRIBUTING.md` first; the evidence tier rules are non-negotiable and PRs that add untagged claims will be asked to tag them.
